@@ -22,3 +22,21 @@ A mesma lógica é aplicada nos
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
 Start contando como esquerda, e End contando como direita, pelo visto.
+
+Se eu quiser fazer que o botaoIdioma fique no canto superior esquerdo, eu poderia só usar
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+mas, fazer dessa forma faria com que o botão ficasse colado nas bordas extremas do canto superior direita,
+que ficaria feio. Pra evitar isso, utilizamos margens pra deixar afastado o botão da borda.
+Essas sendo:
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+Lembrando, top sendo topo, duh, e End sendo a "direita".
+
+10:38
+
+O app está atualizado, porém foi em maior parte copia e cola do Gemini. 
+Estarei compreendo
+
+
+    
