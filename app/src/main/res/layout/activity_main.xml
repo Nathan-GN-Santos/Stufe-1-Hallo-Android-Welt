@@ -7,9 +7,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fotoPerfil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/luffy_perfil"
+
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        />
+    
+    <TextView
+        android:id="@+id/nomeUsuario"
+        android:text="Nathan Gabriel"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/fotoPerfil"
+        app:layout_constraintStart_toEndOf="@id/fotoPerfil"
+        app:layout_constraintTop_toTopOf="@id/fotoPerfil"
+        />
+
+    <TextView
+        android:id="@+id/nomeCurso"
+        android:text="Análise e Desenvolvimento de Sistemas"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/nomeUsuario"
+        />
+
+    <TextView
+        android:id="@+id/nomeCidade"
+        android:text="Mogi das Cruzes"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/nomeCurso"
+
+        />
+    <TextView
+        android:id="@+id/nomeFaculdade"
+        android:text="Centro Univ. Braz Cubas"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/nomeCidade"
+
+        />
+
     <Button
         android:backgroundTint="@android:color/darker_gray"
         android:id="@+id/botaoCores"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -21,13 +83,15 @@
     <Button
         android:backgroundTint="@android:color/holo_orange_dark"
         android:id="@+id/botaoIdiomas"
+
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
 
         />
 

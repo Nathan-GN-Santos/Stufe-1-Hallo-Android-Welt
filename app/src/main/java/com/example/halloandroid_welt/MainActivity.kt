@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         //variaveis
         val botaoCores = findViewById<Button>(R.id.botaoCores)
         val botaoIdioma = findViewById<Button>(R.id.botaoIdiomas)
+        val nomeUsuario = findViewById<TextView>(R.id.nomeUsuario)
+
 
     // botao das cores
         //variavel que muda as cores
@@ -66,10 +68,34 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Clique para mudar o IDIOMA
-        botaoIdioma.setOnClickListener {
-            idiomaCont++
-            if (idiomaCont > 3) idiomaCont = 0 // Reinicia se passar de Espanhol
-            atualizarInterface() // Atualiza a tela na hora!
+        botaoIdioma.setOnClickListener {view ->
+            //criar popoup menu
+            //this é o context (essa activiy)
+            //view é botão onde o menu vai brotar emcima
+            val popup = android.widget.PopupMenu(this,view)
+
+            //aqui fzmos o menu
+
+            popup.menu.add(0,0,0, "Português")
+            popup.menu.add(0,1,1,"Deutsch")
+            popup.menu.add(0,2,2,"English")
+            popup.menu.add(0,3,3,"Español")
+
+            //aq dizemos oq aconteeu qunaod clicaar em uma opção
+            popup.setOnMenuItemClickListener { item ->
+                //item.id é pra ser aqueles números que colocamos ali em cima
+                idiomaCont = item.itemId
+
+                //agora que valor foi mudado, manda a interfacae att
+                atualizarInterface()
+
+                //true diz que o clique foi processado com sucesso
+                true
+            }
+
+            // mostrar menu na tela
+            popup.show()
+
         }
 
         atualizarInterface()

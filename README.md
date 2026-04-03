@@ -36,7 +36,30 @@ Lembrando, top sendo topo, duh, e End sendo a "direita".
 10:38
 
 O app está atualizado, porém foi em maior parte copia e cola do Gemini. 
-Estarei compreendo
+Estarei compreendendo o código agora.
 
+
+03/04/2026 07:50
+Comecei a modificar o código novamente. O botão mudava com o clique
+indo pra o próximo idioma de forma sequencial sem poder escolher o idioma que vc quer ir direto.
+
+Aqui aprendi PopupMenu :que é a listinha de opções
+view, que ficou dentro do setOnClickListener, que indica aonde a listinha deve aparecer(botão)
+menu.add() é os itens da lista, nela colocamos seus nomes como tbm seus códigos de verificação.
+setMenuOnClickListener: è um listener especiifico para menus. ele fica esperando vc clicar na opçõa
+item: é a opção q o user escolher
+itemId: o RG do dos itens, onde acessamos seus codigos de identificação do menu.add()
+
+08:48
+Agora estou mexendo no xml e pondo meu meu nome e uma foto placeholder.
+no android:src n é necessário colocar o .jpg no final. Eu tinha colocado e deu erro.
+
+09:24
+Na hora de organizar dentro dos <textView> estarei utilizando:
+    -Identidade; android:id ="@id/
+    -Contéudo; android:text = "texto"
+    -Estilo:
+    -Tamanho;
+    -Posicionamento; constraint e layouts
 
     
