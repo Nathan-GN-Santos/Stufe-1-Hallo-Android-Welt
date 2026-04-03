@@ -39,11 +39,12 @@
 
     <TextView
         android:id="@+id/nomeCurso"
-        android:text="Análise e Desenvolvimento de Sistemas"
+        android:text="Superior de Tecnologia em Análise e Desenvolvimento de Sistemas"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
         app:layout_constraintTop_toBottomOf="@id/nomeUsuario"
         />
 
@@ -54,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
         app:layout_constraintTop_toBottomOf="@id/nomeCurso"
 
         />
@@ -61,24 +63,13 @@
         android:id="@+id/nomeFaculdade"
         android:text="Centro Univ. Braz Cubas"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
+        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
         app:layout_constraintTop_toBottomOf="@id/nomeCidade"
-
-        />
-
-    <Button
-        android:backgroundTint="@android:color/darker_gray"
-        android:id="@+id/botaoCores"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
     <Button
         android:backgroundTint="@android:color/holo_orange_dark"
@@ -95,6 +86,60 @@
 
         />
 
+    <Button
+        android:backgroundTint="@android:color/darker_gray"
+        android:id="@+id/botaoCores"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botaoGitHub"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icone_github"
+
+        android:scaleType="fitCenter"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"/>
+
+    <ImageButton
+        android:id="@+id/botaoGmail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icone_gmail"
+
+        android:scaleType="fitCenter"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/botaoGitHub"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"/>
+
+    <ImageButton
+        android:id="@+id/botaoLinkedIn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icone_linkedin" android:scaleType="fitCenter"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
