@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hallo, Android-Welt!</string>
+    <string name="botao_idioma">Mudar Idioma</string>
 </resources>
