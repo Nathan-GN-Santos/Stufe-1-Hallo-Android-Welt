@@ -22,15 +22,18 @@
 
     <TextView
         android:id="@+id/nomeUsuario"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Nathan Gabriel"
         android:textColor="#333333"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
         app:layout_constraintStart_toEndOf="@id/fotoPerfil"
-        app:layout_constraintTop_toTopOf="@id/fotoPerfil" />
+        app:layout_constraintTop_toTopOf="@id/fotoPerfil"
+        app:layout_constraintEnd_toStartOf="@+id/botaoTema"
 
     <TextView
         android:id="@+id/nomeCurso"
@@ -38,9 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="Tecnologia em ADS"
+        android:gravity="center_vertical"
         android:textColor="#666666"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/botaoIdiomas"
+        app:layout_constraintEnd_toStartOf="@+id/botaoTema"
         app:layout_constraintStart_toStartOf="@id/nomeUsuario"
         app:layout_constraintTop_toBottomOf="@id/nomeUsuario" />
 
