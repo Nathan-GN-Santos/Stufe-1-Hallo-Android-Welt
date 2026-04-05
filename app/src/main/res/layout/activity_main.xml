@@ -5,141 +5,190 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     tools:context=".MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/fotoPerfil"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/luffy_perfil"
-
-        app:shapeAppearanceOverlay="@style/CircleImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"
-        />
-    
+        app:shapeAppearanceOverlay="@style/CircleImage" />
+
     <TextView
         android:id="@+id/nomeUsuario"
-        android:text="Nathan Gabriel"
-
-        android:textSize="20sp"
-        android:textStyle="bold"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-
-        app:layout_constraintBottom_toBottomOf="@id/fotoPerfil"
+        android:layout_marginStart="16dp"
+        android:text="Nathan Gabriel"
+        android:textColor="#333333"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/fotoPerfil"
-        app:layout_constraintTop_toTopOf="@id/fotoPerfil"
-        />
+        app:layout_constraintTop_toTopOf="@id/fotoPerfil" />
 
     <TextView
         android:id="@+id/nomeCurso"
-        android:text="Superior de Tecnologia em Análise e Desenvolvimento de Sistemas"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
-        app:layout_constraintTop_toBottomOf="@id/nomeUsuario"
-        />
-
-    <TextView
-        android:id="@+id/nomeCidade"
-        android:text="Mogi das Cruzes"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
-        app:layout_constraintTop_toBottomOf="@id/nomeCurso"
-
-        />
-    <TextView
-        android:id="@+id/nomeFaculdade"
-        android:text="Centro Univ. Braz Cubas"
-
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
+        android:layout_marginEnd="16dp"
+        android:text="Tecnologia em ADS"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/botaoIdiomas"
         app:layout_constraintStart_toStartOf="@id/nomeUsuario"
-        app:layout_constraintTop_toBottomOf="@id/nomeCidade"
+        app:layout_constraintTop_toBottomOf="@id/nomeUsuario" />
+
+    <TextView
+        android:id="@+id/badgeKotlin"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="#212121"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp"
+        android:text="Kotlin (Estudando)"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:drawableStart="@drawable/kotlin_icon_20x20"
+        android:drawablePadding="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/badgePython"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/nomeUsuario"
+        app:layout_constraintTop_toBottomOf="@id/botaoIdiomas"
+    />
+
+    <TextView
+        android:id="@+id/badgePython"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="#212121"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp"
+        android:text="Python IA (Interesse)"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:drawableStart="@drawable/python_icon_20x20"
+        android:drawablePadding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/badgeKotlin"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <Button
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:id="@+id/botaoIdiomas"
-
-        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/badgeKotlin"
+        app:layout_constraintTop_toTopOf="@id/badgeKotlin" />
+    <TextView
+        android:id="@+id/nomeCidade"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="📍 Mogi das Cruzes, Brazil"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/fotoPerfil"
+        app:layout_constraintTop_toBottomOf="@id/badgeKotlin" />
+    <TextView
+        android:id="@+id/nomeFaculdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏫 Centro Univ. Braz Cubas"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/nomeCidade"
+        app:layout_constraintTop_toBottomOf="@id/nomeCidade" />
+
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estudante de ADS focado em dominar o ecossistema Android. Atualmente focado em Kotlin e arquitetura mobile, com futuros planos para trabalhar com IA e Machine Learning. Em busca da primeira oportunidade como estagiário/júnior."
+        android:textSize="14sp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-
-
+        android:lineSpacingExtra="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
+        app:layout_constraintStart_toStartOf="@id/nomeFaculdade"
+        app:layout_constraintTop_toBottomOf="@id/nomeFaculdade"
         />
+
+
 
     <Button
-        android:backgroundTint="@android:color/darker_gray"
-        android:id="@+id/botaoCores"
+        android:id="@+id/botaoIdiomas"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="PT"
+        android:textSize="14dp"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/botaoGitHub"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/icone_github"
+    <Button
+        android:id="@+id/botaoTema"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#444444"
+        android:text="🌙"
+        android:padding="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="28dp"
+        app:layout_constraintEnd_toStartOf="@id/botaoIdiomas"
+        app:layout_constraintTop_toTopOf="@id/botaoIdiomas" />
 
-        android:scaleType="fitCenter"
-        android:padding="12dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="32dp"
-        android:layout_marginStart="32dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
 
-    <ImageButton
-        android:id="@+id/botaoGmail"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/icone_gmail"
+            <ImageButton
+                android:id="@+id/botaoGitHub"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icone_github" />
 
-        android:scaleType="fitCenter"
-        android:padding="12dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="parent"
+            <ImageButton
+                android:id="@+id/botaoLinkedIn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icone_linkedin" />
 
-        app:layout_constraintStart_toEndOf="@id/botaoGitHub"
-        android:layout_marginBottom="32dp"
-        android:layout_marginStart="32dp"/>
-
-    <ImageButton
-        android:id="@+id/botaoLinkedIn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/icone_linkedin" android:scaleType="fitCenter"
-        android:padding="12dp"
-        android:background="?attr/selectableItemBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        />
-
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

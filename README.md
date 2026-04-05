@@ -62,4 +62,23 @@ Na hora de organizar dentro dos <textView> estarei utilizando:
     -Tamanho;
     -Posicionamento; constraint e layouts
 
+
+05/04/2026 09:24 My House
+So here are again. Let's go!
+
+11:58 
+
+O app, foi atualizado
+- Botão Cores removido
+- Botão que muda o tema do app foi add
+- Agora o botão GitHub e LinkedIn levam para  os meus perfis respectivos
+- TextViews de Kotlin e Python foram adicionados( e seus ícones)
+- Bio foi adicionada
+
+A Fazer:
+- Implementar a funcionalidade de mudança de idioma a Bio.
+- Melhorar o Design to Cartão
+- Adicionar o botão "Me Contrate" que encaminha para Whatsapp.
+- Ajudar as mensagens que aparecem quando se aperta repetidamente o botãoidiomas. Há um certo delay.
+- Fazer com que ao clicar nas caixas Kotlin e Python apareça um breve resumo do que planejo fazer com elas.
     
