@@ -79,10 +79,10 @@ class MainActivity : AppCompatActivity() {
                 tvCidade.text = "📍 Mogi das Cruzes, Brazil" // Location stays mostly the same
                 tvFaculdade.text = "🏫 Braz Cubas University Center"
                 tvBio.text = """
-                    Estudante de ADS focado em dominar o ecossistema Android. 
-                    Atualmente focado em Kotlin e arquitetura mobile, 
-                    com futuros planos para trabalhar com IA e Machine Learning. 
-                    Em busca da primeira oportunidade como estagiário/júnior.
+                     ADS student focused on mastering the Android ecosystem.
+                     Currently focused on Kotlin and mobile architecture,
+                     with future plans to work with AI and Machine Learning.
+                     Seeking my first opportunity as an intern/junior.
                     """.trimIndent()
 
                 Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show()
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
         // botão python
         btnBadgePython.setOnClickListener{ view ->
             val popupView = TextView(this).apply{
-                text = if (btnIdiomas == "PT") {
+                text = if (btnIdiomas.text == "PT") {
                     "Isso aqui é o que eu planejo fazer com Python"
                 } else {
                     "This is what I plan to with Python"
