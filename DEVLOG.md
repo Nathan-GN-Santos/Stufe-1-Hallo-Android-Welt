@@ -90,3 +90,13 @@ Planos para hoje:
 
 
     popupView é conteúdo, popupWindow é a apresentação de tal conteúdo.
+
+09:33 
+Funcionalidades das badges Python e Kotlin já implementada. Agora só pensar melhor no design e conteúdo.
+Acabei de perceber, que apos clicar no botões linkedin e github e ir para as respectivas pges
+ou apps, ao abrir o app q estou fznd novamente, o linkedin ou github continuam aberto.
+como se meu app estivesse rodando esses apps.
+Are they using my app to run? Blasfemous.
+
+09:54 Ativando o botõa de idiomas
+    First u identify the victims, then make then change languages. simples.
