@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
-    tools:context=".MainActivity">
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/fotoPerfil"
@@ -44,6 +49,7 @@
         android:gravity="center_vertical"
         android:textColor="#666666"
         android:textSize="14sp"
+        android:maxLines="1"
         app:layout_constraintEnd_toStartOf="@+id/botaoTema"
         app:layout_constraintStart_toStartOf="@id/nomeUsuario"
         app:layout_constraintTop_toBottomOf="@id/nomeUsuario" />
@@ -57,11 +63,12 @@
         android:background="#212121"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
-        android:text="Kotlin (Estudando)"
+        android:text="Kotlin      (Estudando)"
         android:textColor="@android:color/white"
         android:textSize="11sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:maxLines="2"
         android:drawableStart="@drawable/kotlin_icon_20x20"
         android:drawablePadding="4dp"
         app:layout_constraintEnd_toStartOf="@+id/badgePython"
@@ -108,23 +115,22 @@
         app:layout_constraintStart_toStartOf="@id/nomeCidade"
         app:layout_constraintTop_toBottomOf="@id/nomeCidade" />
 
-    <TextView
-        android:id="@+id/bio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Estudante de ADS focado em dominar o ecossistema Android. Atualmente focado em Kotlin e arquitetura mobile, com futuros planos para trabalhar com IA e Machine Learning. Em busca da primeira oportunidade como estagiário/júnior."
-        android:textSize="14sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:lineSpacingExtra="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/nomeFaculdade"
-        app:layout_constraintTop_toBottomOf="@id/nomeFaculdade"
-        />
 
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Estudante de ADS focado em dominar o ecossistema Android. Atualmente focado em Kotlin e arquitetura mobile, com futuros planos para trabalhar com IA e Machine Learning. Em busca da primeira oportunidade como estagiário/júnior."
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/nomeFaculdade"
+            app:layout_constraintTop_toBottomOf="@id/nomeFaculdade" />
 
-
-    <Button
+        <Button
         android:id="@+id/botaoIdiomas"
         android:layout_width="56dp"
         android:layout_height="56dp"
