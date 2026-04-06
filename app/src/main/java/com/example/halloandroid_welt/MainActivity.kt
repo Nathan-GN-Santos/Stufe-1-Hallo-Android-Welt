@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val btnLinkedIn = findViewById<ImageButton>(R.id.botaoLinkedIn)
         val btnIdiomas = findViewById<Button>(R.id.botaoIdiomas)
         val btnBadgeKotlin = findViewById<TextView>(R.id.badgeKotlin)
+        val btnBadgePython = findViewById<TextView>(R.id.badgePython)
         // No seu MainActivity.kt, dentro do onCreate
 
         val rootLayout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
@@ -63,8 +64,8 @@ class MainActivity : AppCompatActivity() {
         // Ação Botão Idiomas (Lógica inicial)
         btnIdiomas.setOnClickListener {
             if (btnIdiomas.text == "PT") {
-                btnIdiomas.text = "DE" // Muda para Alemão (Deutsch)
-                Toast.makeText(this, "Willkommen!", Toast.LENGTH_SHORT).show()
+                btnIdiomas.text = "EN" // Muda para Alemão (Deutsch)
+                Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show()
             } else {
                 btnIdiomas.text = "PT"
                 Toast.makeText(this, "Bem-vindo!", Toast.LENGTH_SHORT).show()
@@ -76,6 +77,25 @@ class MainActivity : AppCompatActivity() {
         btnBadgeKotlin.setOnClickListener{ view ->
             val popupView = TextView(this).apply{
                 text = "Isso aqui é o que eu planejo fazer com Koltin"
+                setBackgroundColor(Color.parseColor("#333333"))
+                setTextColor(Color.WHITE)
+                setPadding(20,20,20,20)
+            }
+
+            val MeuPopup = PopupWindow(
+                popupView,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                true
+            )
+            // oq faz o popup aparecer debaixo do botão
+            MeuPopup.showAsDropDown(view)
+
+        }
+        // botão python
+        btnBadgePython.setOnClickListener{ view ->
+            val popupView = TextView(this).apply{
+                text = "Isso aqui é o que eu planejo fazer com Python"
                 setBackgroundColor(Color.parseColor("#333333"))
                 setTextColor(Color.WHITE)
                 setPadding(20,20,20,20)

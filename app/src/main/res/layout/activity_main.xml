@@ -38,7 +38,7 @@
         android:maxLines="1"
         app:layout_constraintStart_toEndOf="@id/fotoPerfil"
         app:layout_constraintTop_toTopOf="@id/fotoPerfil"
-        app:layout_constraintEnd_toStartOf="@+id/botaoTema"
+        app:layout_constraintEnd_toStartOf="@+id/botaoTema" />
 
     <TextView
         android:id="@+id/nomeCurso"
@@ -202,3 +202,4 @@
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
