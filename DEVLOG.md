@@ -1,5 +1,8 @@
 Hallo, README.md !
 
+Santander F1RST:
+
+
 02/04/2026 09:06
 
 O app já está com um botão no centro que muda de cor e frases em alemão quando apertado.
@@ -100,3 +103,17 @@ Are they using my app to run? Blasfemous.
 
 09:54 Ativando o botõa de idiomas
     First u identify the victims, then make then change languages. simples.
+
+07/04/2026 08:48
+
+Today I'll be changing  the app layout based on Aline, Keren and Luana feedbacks on my app.
+It's gonna be more of a curriculum than a cartão de visitas digital from now on.
+    The structure might something like:
+        Header: My name, my photo, the theme and language buttons.
+        Bio: Who am I?
+        Academic info: My courses and etc.
+        Skills: Soft and Hard.
+        Project: well, the app IS the project, and only...For now.
+        My links and contacts:  My links and contacts
+    
+    "Android Developer focusing on scalable architecture and AI integration"

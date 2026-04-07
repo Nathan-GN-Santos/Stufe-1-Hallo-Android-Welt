@@ -28,13 +28,14 @@ class MainActivity : AppCompatActivity() {
         // Variáveis dos Botões
         val btnGitHub = findViewById<ImageButton>(R.id.botaoGitHub)
         val btnLinkedIn = findViewById<ImageButton>(R.id.botaoLinkedIn)
-        val btnIdiomas = findViewById<Button>(R.id.botaoIdiomas)
+        val btnIdiomas = findViewById<Button>(R.id.btnLanguage)
         val btnBadgeKotlin = findViewById<TextView>(R.id.badgeKotlin)
         val btnBadgePython = findViewById<TextView>(R.id.badgePython)
+        val btnTema = findViewById<Button>(R.id.btnMode)
         // No seu MainActivity.kt, dentro do onCreate
 
         val rootLayout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
-        val btnTema = findViewById<Button>(R.id.botaoTema)
+
         var isDarkMode = false
 
         btnTema.setOnClickListener {
