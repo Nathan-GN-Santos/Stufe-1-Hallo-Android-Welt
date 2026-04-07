@@ -117,3 +117,14 @@ It's gonna be more of a curriculum than a cartão de visitas digital from now on
         My links and contacts:  My links and contacts
     
     "Android Developer focusing on scalable architecture and AI integration"
+
+11:36 
+- Change the layout
+- Removed the kotlin and Python badges
+- Now the langguage btn givess u the visual option to choose between usa flag and brazil flag
+- a section for th education
+- a section for the projects
+- the socialcard was cahnge for a bottombar view, still funciton the same
+
+to do:
+- a lot
