@@ -11,7 +11,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="32dp"
+        android:paddingBottom="0dp"
         tools:context=".MainActivity">
 
         <View
@@ -21,6 +21,7 @@
             android:background="#212121"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/userName"
@@ -111,38 +112,12 @@
             app:layout_constraintStart_toStartOf="@id/bio"
             app:layout_constraintTop_toBottomOf="@id/bio" />
 
-        <TextView
+        <View
             android:id="@+id/badgeKotlin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/rounded_badge"
-            android:padding="12dp"
-            android:text="Kotlin (Estudando)"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:drawableStart="@drawable/kotlin_icon_20x20"
-            app:layout_constraintEnd_toStartOf="@+id/badgePython"
-            app:layout_constraintStart_toStartOf="@id/tituloSkills"
-            app:layout_constraintTop_toBottomOf="@id/tituloSkills" />
-
-        <TextView
-            android:id="@+id/badgePython"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_badge"
-            android:padding="12dp"
-            android:text="Python IA (Interesse)"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:drawableStart="@drawable/python_icon_20x20"
-            app:layout_constraintBottom_toBottomOf="@id/badgeKotlin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/badgeKotlin"
-            app:layout_constraintTop_toTopOf="@id/badgeKotlin" />
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tituloSkills"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:id="@+id/sectionEducation"
@@ -193,9 +168,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Featured Projects / Projetos"
+            android:text="Featured Projects"
             android:textStyle="bold"
             android:textColor="#333333"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sectionEducation" />
 
         <com.google.android.material.card.MaterialCardView
@@ -224,17 +200,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Native Android app developed to showcase technical skills, UI/UX consistency, and multi-language support (i18n)."
+                    android:text="Native Android app developed to showcase technical skills."
                     android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Stack: Kotlin, XML, ConstraintLayout, Material Design 3"
-                    android:textColor="#666666"
-                    android:textSize="12sp"
-                    android:textStyle="italic" />
 
                 <Button
                     android:id="@+id/btnVerCodigo"
@@ -242,43 +209,42 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="View Source Code / Ver Código"
-                    android:textColor="@android:color/holo_blue_dark" />
+                    android:text="View Source Code" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-      <View
-          android:id="@+id/bottomBar"
-          android:layout_width="0dp"
-          android:layout_height="70"
-          app:layout_constraintBottom_toBottomOf="parent"
+        <View
+            android:id="@+id/bottomBar"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="#212121"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="@id/bottomBar"
+            app:layout_constraintBottom_toBottomOf="@id/bottomBar">
 
+            <ImageButton
+                android:id="@+id/botaoGitHub"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icone_github" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="16dp"
-                app:layout_constraintTop_toTopOf="@id/bottomBar"
-                app:layout_constraintBottom_toBottomOf="@id/bottomBar"
-                >
-
-                <ImageButton
-                    android:id="@+id/botaoGitHub"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/icone_github" />
-
-                <ImageButton
-                    android:id="@+id/botaoLinkedIn"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/icone_linkedin" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+            <ImageButton
+                android:id="@+id/botaoLinkedIn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icone_linkedin" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
