@@ -227,29 +227,53 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/projectsCard"
         />
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="16dp"
+            android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="@id/bottomBar"
-            app:layout_constraintBottom_toBottomOf="@id/bottomBar">
+            app:layout_constraintBottom_toBottomOf="@id/bottomBar"
+            app:layout_constraintStart_toStartOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="@id/bottomBar">
+
+            <ImageButton
+                android:id="@+id/btnWhatsapp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/whatsapp_icon_black_transparent"/>
 
             <ImageButton
                 android:id="@+id/botaoGitHub"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginEnd="32dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
                 android:src="@drawable/icone_github" />
+
+            <Space
+                android:layout_width="32dp"
+                android:layout_height="wrap_content" />
 
             <ImageButton
                 android:id="@+id/botaoLinkedIn"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
                 android:src="@drawable/icone_linkedin" />
+
+            <ImageButton
+                android:id="@+id/btnEmail"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icone_gmail"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
