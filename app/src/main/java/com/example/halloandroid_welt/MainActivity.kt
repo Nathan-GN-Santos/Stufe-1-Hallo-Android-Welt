@@ -45,22 +45,26 @@ class MainActivity : AppCompatActivity() {
         val tvEducationTitle = findViewById<TextView>(R.id.titleEducation)
         val btnGitHub = findViewById<ImageButton>(R.id.botaoGitHub)
         val btnLinkedIn = findViewById<ImageButton>(R.id.botaoLinkedIn)
-        val btnIdiomas = findViewById<Button>(R.id.btnLanguage)
+        val btnLanguage = findViewById<LinearLayout>(R.id.containerLanguages)
         val btnTema = findViewById<Button>(R.id.btnMode)
         val rootLayout = findViewById<ConstraintLayout>(R.id.main)
 
         // --- CÓDIGO NOVO INICIA AQUI ---
 
         // 2. Definir a lista de idiomas (Certifique-se que os nomes dos drawables estão corretos)
+        // 1. Adicione as 4 bandeiras aqui
         val languages = listOf(
-            Language("PT-BR", R.drawable.spain_icon),
-            Language("EN", R.drawable.eua_icon)
+            Language("Português", R.drawable.brazil_icon),
+            Language("English", R.drawable.usa_icon),
+            Language("Español", R.drawable.spain_icon), // Adicione seus drawables
+            Language("Deutsch", R.drawable.germany_icon)
         )
+
 
         // 3. Configurar o ListPopupWindow
         val listPopupWindow = ListPopupWindow(this)
         listPopupWindow.setAdapter(LanguageAdapter(this, languages))
-        listPopupWindow.anchorView = btnIdiomas // Alinha o popup abaixo do botão
+        listPopupWindow.anchorView = btnLanguage // Alinha o popup abaixo do botão
         // APLIQUE ISSO AQUI:
         listPopupWindow.setBackgroundDrawable(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.popup_background))
         listPopupWindow.width = 400 // Ajuste para não ficar tão largo e sobrar menos branco
@@ -73,14 +77,14 @@ class MainActivity : AppCompatActivity() {
             val selected = languages[position]
 
             if (selected.name == "English") {
-                btnIdiomas.text = "EN"
+                //btnLanguage.text = "EN"
                 tvDegree.text = "Associate Degree in Systems Analysis and Development"
                 tvUniversity.text = "Braz Cubas University Center"
                 tvEducationTitle.text = "Education"
                 tvBio.text = "ADS student focused on mastering the Android ecosystem."
                 Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show()
             } else {
-                btnIdiomas.text = "PT"
+                //btnLanguage.text = "PT"
                 tvDegree.text = "Tecnologia em ADS"
                 tvUniversity.text = "Centro Univ. Braz Cubas"
                 tvEducationTitle.text = "Formação"
@@ -91,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 5. Substituir o antigo clique do botão para abrir o Popup
-        btnIdiomas.setOnClickListener {
+        btnLanguage.setOnClickListener {
             listPopupWindow.show()
         }
 

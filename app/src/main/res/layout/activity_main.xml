@@ -39,18 +39,24 @@
             app:layout_constraintStart_toStartOf="@id/topBar"
             app:layout_constraintTop_toTopOf="@id/topBar" />
 
-        <Button
-            android:id="@+id/btnLanguage"
-            android:layout_width="50dp"
+        <LinearLayout
+            android:id="@+id/containerLanguages"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="PT"
-            android:padding="0dp"
-            app:cornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="@id/topBar"
+            android:background="@drawable/bg_language_group"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/topBar"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:id="@+id/imgCurrentFlag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/brazil_icon" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnMode"
@@ -62,7 +68,7 @@
             android:padding="0dp"
             app:cornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="@id/topBar"
-            app:layout_constraintEnd_toStartOf="@id/btnLanguage"
+            app:layout_constraintEnd_toStartOf="@id/containerLanguages"
             app:layout_constraintTop_toTopOf="@id/topBar" />
 
         <com.google.android.material.imageview.ShapeableImageView
