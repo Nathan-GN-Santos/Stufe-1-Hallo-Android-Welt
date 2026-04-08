@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         // 2. Definir a lista de idiomas (Certifique-se que os nomes dos drawables estão corretos)
         val languages = listOf(
-            Language("PT-BR", R.drawable.brazil_icon),
+            Language("PT-BR", R.drawable.spain_icon),
             Language("EN", R.drawable.eua_icon)
         )
 
