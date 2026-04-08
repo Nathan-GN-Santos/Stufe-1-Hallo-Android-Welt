@@ -128,3 +128,8 @@ It's gonna be more of a curriculum than a cartão de visitas digital from now on
 
 to do:
 - a lot
+
+
+08/04/2026
+
+-Update to version 0.1.0

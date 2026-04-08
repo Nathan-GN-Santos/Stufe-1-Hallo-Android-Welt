@@ -23,10 +23,10 @@ class LanguageAdapter(context: android.content.Context, languages: List<Language
             .inflate(R.layout.item_language, parent, false)
 
         val language = getItem(position)
-        val textView = view.findViewById<TextView>(R.id.txtName)
+        //val textView = view.findViewById<TextView>(R.id.txtName)
         val imageView = view.findViewById<ImageView>(R.id.imgFlag)
 
-        textView.text = language?.name
+       // textView.text = language?.name
         imageView.setImageResource(language?.flagResId ?: 0)
 
         return view
@@ -67,9 +67,8 @@ class MainActivity : AppCompatActivity() {
         listPopupWindow.anchorView = btnLanguage // Alinha o popup abaixo do botão
         // APLIQUE ISSO AQUI:
         listPopupWindow.setBackgroundDrawable(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.popup_background))
-        listPopupWindow.width = 400 // Ajuste para não ficar tão largo e sobrar menos branco
-        listPopupWindow.horizontalOffset = -100 // Opcional: desloca um pouco para a esquerda/direita para alinhar melhor
-        listPopupWindow.width = 300 // Ajuste a largura conforme necessário
+        listPopupWindow.horizontalOffset = 10 // Opcional: desloca um pouco para a esquerda/direita para alinhar melhor
+        listPopupWindow.width = 100 // Ajuste a largura conforme necessário
         listPopupWindow.setModal(true)
 
         // 4. Lógica de clique no item da lista

@@ -13,12 +13,12 @@
         android:layout_height="24dp"
         android:scaleType="centerInside" />
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textColor="#333333"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-</LinearLayout>
+    <!-- <TextView
+         android:id="@+id/txtName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="10dp"
+         android:textColor="#333333"
+         android:textSize="14sp"
+         android:textStyle="bold" /> -->
+ </LinearLayout>
