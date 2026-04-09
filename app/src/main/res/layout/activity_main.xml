@@ -108,6 +108,11 @@
             app:layout_constraintStart_toStartOf="@id/tituloBio"
             app:layout_constraintTop_toBottomOf="@id/tituloBio" />
 
+        <LinearLayout
+            android:id
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
         <TextView
             android:id="@+id/tituloSkills"
             android:layout_width="wrap_content"
@@ -247,6 +252,10 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/whatsapp_icon_black_transparent"/>
 
+            <Space
+                android:layout_width="32dp"
+                android:layout_height="wrap_content" />
+
             <ImageButton
                 android:id="@+id/botaoGitHub"
                 android:layout_width="45dp"
@@ -266,6 +275,10 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="fitCenter"
                 android:src="@drawable/icone_linkedin" />
+
+            <Space
+                android:layout_width="32dp"
+                android:layout_height="wrap_content" />
 
             <ImageButton
                 android:id="@+id/btnEmail"
