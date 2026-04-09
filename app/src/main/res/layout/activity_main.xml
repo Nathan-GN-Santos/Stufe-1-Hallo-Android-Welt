@@ -71,63 +71,115 @@
             app:layout_constraintEnd_toStartOf="@id/containerLanguages"
             app:layout_constraintTop_toTopOf="@id/topBar" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/userPhoto"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/luffy_perfil"
-            app:layout_constraintStart_toStartOf="@id/topBar"
-            app:layout_constraintEnd_toEndOf="@id/topBar"
-            app:layout_constraintTop_toBottomOf="@id/topBar"
-            app:shapeAppearanceOverlay="@style/CircleImage" />
-
         <TextView
             android:id="@+id/tituloBio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
             android:text="Sobre Mim"
             android:textStyle="bold"
             android:textColor="#333333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userPhoto" />
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
 
         <TextView
             android:id="@+id/bio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:lineSpacingExtra="4dp"
             android:text="Estudante de ADS focado em dominar o ecossistema Android. Atualmente focado em Kotlin e arquitetura mobile..."
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/tituloBio"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tituloBio" />
-
-        <LinearLayout
-            android:id
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
 
         <TextView
             android:id="@+id/tituloSkills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
             android:text="Hard Skills"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/bio"
+            android:textColor="#333333"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bio" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupHardSkills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:chipSpacingHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloSkills">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipKotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAndroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android SDK" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Git / GitHub" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/tituloSoftSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Soft Skills"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupHardSkills" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSoftSkills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloSoftSkills">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Problem Solving"
+                style="@style/Widget.MaterialComponents.Chip.Action" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teamwork" />
+        </com.google.android.material.chip.ChipGroup>
 
         <View
             android:id="@+id/badgeKotlin"
             android:layout_width="1dp"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@id/tituloSkills"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupSoftSkills"
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
@@ -179,6 +231,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
             android:text="Featured Projects"
             android:textStyle="bold"
             android:textColor="#333333"
@@ -201,6 +254,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/projectTitleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kotlin Interactive Resume App"
@@ -208,6 +262,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/projectDescriptionText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -229,12 +284,15 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:background="#212121"
+            android:layout_marginTop="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/projectsCard"
-        />
+            />
+
         <LinearLayout
+            android:id="@+id/containerSocialLinks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -257,7 +315,7 @@
                 android:layout_height="wrap_content" />
 
             <ImageButton
-                android:id="@+id/botaoGitHub"
+                android:id="@+id/btnGitHub"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -269,7 +327,7 @@
                 android:layout_height="wrap_content" />
 
             <ImageButton
-                android:id="@+id/botaoLinkedIn"
+                android:id="@+id/btnLinkedIn"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="?attr/selectableItemBackgroundBorderless"

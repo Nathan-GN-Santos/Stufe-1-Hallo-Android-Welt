@@ -142,3 +142,38 @@ To do:
     If the user clicks the icon, he's directed to the app for immediate contact
     If the user clicks the number, it copied to the clipboard.
   The same logic will be applied to the email. 
+
+- App division:
+  - Section 1: Me and extra
+    - Name
+    - My languages
+    - My age(maybe)
+    - Maybe photo(probably not)
+    - Also, on the right of the top bar, the language button and theme button.
+    - Increment anchors (skip to sessions) somewhere
+  - Section 2: Projects
+    - A linearLayout, ReciclerView, CardView or other display my future, past and present projects.
+  - Section 3: Skills
+    - Hard Skills
+    - Skills in development(maybe just put this in the Hard Skills)
+    - Soft Skills(Ser breve)
+    //Tip: Use chips.
+      - Subsection: Learning Path/Future Skills
+  - Section 4: Education and Certificates
+      - Recent first
+  - Section 5: Contacts
+    - icon in the left , contact in the right
+
+    Erased Code: 
+    - <!--<com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/luffy_perfil"
+            app:layout_constraintStart_toStartOf="@id/topBar"
+            app:layout_constraintEnd_toEndOf="@id/topBar"
+            app:layout_constraintTop_toBottomOf="@id/topBar"
+            app:shapeAppearanceOverlay="@style/CircleImage" />-->
