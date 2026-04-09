@@ -133,3 +133,12 @@ to do:
 08/04/2026
 
 -Update to version 0.1.0
+
+
+09/04/2026
+
+To do:
+- Add, in the same line a Whatsapp icon and my number to it's left. 
+    If the user clicks the icon, he's directed to the app for immediate contact
+    If the user clicks the number, it copied to the clipboard.
+  The same logic will be applied to the email. 
