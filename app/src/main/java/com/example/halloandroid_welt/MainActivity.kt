@@ -26,7 +26,7 @@ class LanguageAdapter(context: android.content.Context, languages: List<Language
         //val textView = view.findViewById<TextView>(R.id.txtName)
         val imageView = view.findViewById<ImageView>(R.id.imgFlag)
 
-       // textView.text = language?.name
+        // textView.text = language?.name
         imageView.setImageResource(language?.flagResId ?: 0)
 
         return view
@@ -69,8 +69,14 @@ class MainActivity : AppCompatActivity() {
         listPopupWindow.setAdapter(LanguageAdapter(this, languages))
         listPopupWindow.anchorView = btnLanguage // Alinha o popup abaixo do botão
         // APLIQUE ISSO AQUI:
-        listPopupWindow.setBackgroundDrawable(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.popup_background))
-        listPopupWindow.horizontalOffset = 10 // Opcional: desloca um pouco para a esquerda/direita para alinhar melhor
+        listPopupWindow.setBackgroundDrawable(
+            androidx.core.content.ContextCompat.getDrawable(
+                this,
+                R.drawable.popup_background
+            )
+        )
+        listPopupWindow.horizontalOffset =
+            10 // Opcional: desloca um pouco para a esquerda/direita para alinhar melhor
         listPopupWindow.width = 100 // Ajuste a largura conforme necessário
         listPopupWindow.setModal(true)
 
@@ -119,12 +125,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnGitHub.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Nathan-GN-Santos"))
+            val intent =
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Nathan-GN-Santos"))
             startActivity(intent)
         }
 
         btnLinkedIn.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/nathangabrielsantos/"))
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.linkedin.com/in/nathangabrielsantos/")
+            )
             startActivity(intent)
         }
     }
