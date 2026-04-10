@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<TextView>(R.id.userLanguages).isSelected = true
         val tvDegree = findViewById<TextView>(R.id.degreeName)
         val tvUniversity = findViewById<TextView>(R.id.universityName)
         val tvBio = findViewById<TextView>(R.id.bio)

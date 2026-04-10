@@ -145,11 +145,11 @@ To do:
 
 - App division:
   - Section 1: Me and extra
-    - Name
-    - My languages
+    - Name(ok)
+    - My languages(ok)
     - My age(maybe)
-    - Maybe photo(probably not)
-    - Also, on the right of the top bar, the language button and theme button.
+    - Maybe photo(probably not)(nah)
+    - Also, on the right of the top bar, the language button and theme button.(already there)
     - Increment anchors (skip to sessions) somewhere
   - Section 2: Projects
     - A linearLayout, ReciclerView, CardView or other display my future, past and present projects.

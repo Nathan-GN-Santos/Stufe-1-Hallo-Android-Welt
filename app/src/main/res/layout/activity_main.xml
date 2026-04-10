@@ -17,11 +17,13 @@
         <View
             android:id="@+id/topBar"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="0dp"
             android:background="#212121"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/userAgeAndPlace"
+            />
 
         <TextView
             android:id="@+id/userName"
@@ -29,15 +31,48 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
             android:text="Nathan G.N. Santos"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
             android:maxLines="2"
-            app:layout_constraintBottom_toBottomOf="@id/topBar"
             app:layout_constraintEnd_toStartOf="@+id/btnMode"
             app:layout_constraintStart_toStartOf="@id/topBar"
             app:layout_constraintTop_toTopOf="@id/topBar" />
+
+        <TextView
+            android:id="@+id/userLanguages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Inglês C1 • Português Nativo"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            app:layout_constraintEnd_toEndOf="@+id/userName"
+            app:layout_constraintStart_toStartOf="@id/userName"
+
+            />
+
+        <TextView
+            android:id="@+id/userAgeAndPlace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="12dp"
+            android:text="Brazil, Mogi das Cruzes • 19"
+            android:textColor="#BBBBBB"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/userLanguages"
+            app:layout_constraintStart_toStartOf="@id/userName"
+             />
 
         <LinearLayout
             android:id="@+id/containerLanguages"
@@ -60,8 +95,8 @@
 
         <Button
             android:id="@+id/btnMode"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#444444"
             android:text="🌙"
@@ -70,6 +105,29 @@
             app:layout_constraintBottom_toBottomOf="@id/topBar"
             app:layout_constraintEnd_toStartOf="@id/containerLanguages"
             app:layout_constraintTop_toTopOf="@id/topBar" />
+
+        <HorizontalScrollView
+            android:id="@+id/anchorBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:scrollbars="none"
+            android:background="#3CB043"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Bio" android:id="@+id/gotoBio"/>
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Skills" android:id="@+id/gotoSkills"/>
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Projects" android:id="@+id/gotoProjects"/>
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/tituloBio"
@@ -81,7 +139,7 @@
             android:textStyle="bold"
             android:textColor="#333333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/topBar" />
+            app:layout_constraintTop_toBottomOf="@id/anchorBar" />
 
         <TextView
             android:id="@+id/bio"
@@ -98,7 +156,7 @@
             app:layout_constraintTop_toBottomOf="@id/tituloBio" />
 
         <TextView
-            android:id="@+id/tituloSkills"
+            android:id="@+id/titleHardSkills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -119,7 +177,7 @@
             app:chipSpacingHorizontal="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tituloSkills">
+            app:layout_constraintTop_toBottomOf="@id/titleHardSkills">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipKotlin"
@@ -141,7 +199,7 @@
         </com.google.android.material.chip.ChipGroup>
 
         <TextView
-            android:id="@+id/tituloSoftSkills"
+            android:id="@+id/titleSoftSkills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -161,7 +219,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tituloSoftSkills">
+            app:layout_constraintTop_toBottomOf="@id/titleSoftSkills">
 
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
