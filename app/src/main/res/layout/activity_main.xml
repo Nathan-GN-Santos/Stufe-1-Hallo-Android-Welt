@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +14,29 @@
         android:layout_height="wrap_content"
         android:paddingBottom="0dp"
         tools:context=".MainActivity">
+
+        <HorizontalScrollView
+            android:id="@+id/anchorBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:scrollbars="none"
+            android:background="#3CB043"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Bio" android:id="@+id/gotoBio"/>
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Skills" android:id="@+id/gotoSkills"/>
+                <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="Projects" android:id="@+id/gotoProjects"/>
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <View
             android:id="@+id/topBar"
