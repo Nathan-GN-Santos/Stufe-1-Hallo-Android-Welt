@@ -31,11 +31,17 @@
 
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:text="Bio" android:id="@+id/gotoBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     />
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:text="Skills" android:id="@+id/gotoSkills"/>
+                    android:text="Skills" android:id="@+id/gotoSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:text="Projects" android:id="@+id/gotoProjects"/>
+                    android:text="Projects" android:id="@+id/gotoProjects"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
             </LinearLayout>
         </HorizontalScrollView>
 
