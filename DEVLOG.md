@@ -150,7 +150,8 @@ To do:
     - My age(maybe)
     - Maybe photo(probably not)(nah)
     - Also, on the right of the top bar, the language button and theme button.(already there)
-    - Increment anchors (skip to sessions) somewhere
+    - Increment anchors (skip to sessions) somewhere(ok)
+    
   - Section 2: Projects
     - A linearLayout, ReciclerView, CardView or other display my future, past and present projects.
   - Section 3: Skills
@@ -177,3 +178,12 @@ To do:
             app:layout_constraintEnd_toEndOf="@id/topBar"
             app:layout_constraintTop_toBottomOf="@id/topBar"
             app:shapeAppearanceOverlay="@style/CircleImage" />-->
+      
+    
+
+10/04/2026
+
+- Made the languages i speak textview exist
+- Made the "Where I live and my age" TextView exist
+- Made the anchor bar
+- Change the projectlayout to be after the "me" section and before the skills section
