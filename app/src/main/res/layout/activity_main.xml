@@ -30,7 +30,8 @@
                 android:padding="8dp">
 
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:text="Bio" android:id="@+id/gotoBio"/>
+                    android:text="Bio" android:id="@+id/gotoBio"
+                    />
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:text="Skills" android:id="@+id/gotoSkills"/>
                 <Button style="@style/Widget.MaterialComponents.Button.TextButton"

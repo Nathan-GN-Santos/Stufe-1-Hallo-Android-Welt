@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         val tvEducationTitle = findViewById<TextView>(R.id.titleEducation)
         val btnGitHub = findViewById<ImageButton>(R.id.btnGitHub)
         val btnLinkedIn = findViewById<ImageButton>(R.id.btnLinkedIn)
+        val btnWhatsapp = findViewById<ImageButton>(R.id.btnWhatsapp)
+        val btnEmail = findViewById<ImageButton>(R.id.btnEmail)
         val btnLanguage = findViewById<LinearLayout>(R.id.containerLanguages)
         val btnTema = findViewById<Button>(R.id.btnMode)
         val rootLayout = findViewById<ConstraintLayout>(R.id.main)
