@@ -51,6 +51,47 @@ class MainActivity : AppCompatActivity() {
         val btnLanguage = findViewById<LinearLayout>(R.id.containerLanguages)
         val btnTema = findViewById<Button>(R.id.btnMode)
         val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+        val mainScrollView = findViewById<ScrollView>(R.id.theScrollView)
+
+        //anchorBar btn
+        val btnBio = findViewById<Button>(R.id.gotoBio)
+        val btnProjects = findViewById<Button>(R.id.gotoProjects)
+        val btnSkills = findViewById<Button>(R.id.gotoSkills)
+        val btnEducation = findViewById<Button>(R.id.gotoEducation)
+        val btnContact = findViewById<Button>(R.id.gotoContact)
+
+        //anchorBar function
+        fun scrollToSection(view: View) {
+            mainScrollView.post {
+                mainScrollView.smoothScrollTo(0, view.top)
+            }
+        }
+        //function inclemented
+        btnBio.setOnClickListener {
+            val target = findViewById<TextView>(R.id.tituloBio)
+            scrollToSection(target)
+        }
+
+        btnProjects.setOnClickListener {
+            val target = findViewById<TextView>(R.id.projectsTitle)
+            scrollToSection(target)
+        }
+
+        btnSkills.setOnClickListener {
+            val target = findViewById<TextView>(R.id.titleHardSkills)
+            scrollToSection(target)
+        }
+
+        btnEducation.setOnClickListener {
+            val target = findViewById<LinearLayout>(R.id.sectionEducation)
+            scrollToSection(target)
+        }
+
+        btnContact.setOnClickListener {
+            val target = findViewById<View>(R.id.bottomBar)
+            scrollToSection(target)
+        }
+
 
         // --- CÓDIGO NOVO INICIA AQUI ---
 

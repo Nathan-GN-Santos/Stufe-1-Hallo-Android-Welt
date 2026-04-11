@@ -189,5 +189,7 @@ To do:
 - Change the projectlayout to be after the "me" section and before the skills section
 
 11/04/2026
-
+    0.3.2
 - the day before the last day i touch this portfolio app. Then Ill start the real project.
+- The topBar and scrollBar are now out of the ScrollView. With new structure changes, new layout problems.
+- Now the anchorBar fully work. I'm tired. At least I could give 2 hours to the project after my job.
