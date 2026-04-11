@@ -187,3 +187,7 @@ To do:
 - Made the "Where I live and my age" TextView exist
 - Made the anchor bar
 - Change the projectlayout to be after the "me" section and before the skills section
+
+11/04/2026
+
+- the day before the last day i touch this portfolio app. Then Ill start the real project.
