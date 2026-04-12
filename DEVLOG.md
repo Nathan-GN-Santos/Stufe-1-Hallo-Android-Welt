@@ -193,3 +193,7 @@ To do:
 - the day before the last day i touch this portfolio app. Then Ill start the real project.
 - The topBar and scrollBar are now out of the ScrollView. With new structure changes, new layout problems.
 - Now the anchorBar fully work. I'm tired. At least I could give 2 hours to the project after my job.
+
+12/04/2026
+    0.3.3
+To do: Add the functionality to the Porje t Session and the Whatsapp and Email buttons
