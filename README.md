@@ -15,7 +15,9 @@ My DevCard is a simple functional Android application that introduces my profile
 
 ## MY Learning Journey
 
-If you want to see my devlog, here it is 👉 (DEVLOG.md)
+If you want to see my devlog, here it is ⬇️ 
+
+https://github.com/Nathan-GN-Santos/Stufe-1-Nathans-DevCard/blob/master/DEVLOG.md
 
 🛠 Tech Stack
 - Language: Kotlin
