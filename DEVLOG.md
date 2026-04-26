@@ -1,8 +1,5 @@
 Hallo, README.md !
 
-Santander F1RST:
-
-
 02/04/2026 09:06
 
 O app já está com um botão no centro que muda de cor e frases em alemão quando apertado.
