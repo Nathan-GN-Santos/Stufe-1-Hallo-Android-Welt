@@ -13,13 +13,13 @@ My DevCard is a simple functional Android application that introduces my profile
 
 - Biometric Bio: A section that would be dedicated for a personal biography.
 
-## MY Learning Journey
+## My Learning Journey
 
 If you want to see my devlog, here it is ⬇️ 
 
 https://github.com/Nathan-GN-Santos/Stufe-1-Nathans-DevCard/blob/master/DEVLOG.md
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 - Language: Kotlin
 
 - UI: XML (ConstraintLayout)
@@ -28,7 +28,8 @@ https://github.com/Nathan-GN-Santos/Stufe-1-Nathans-DevCard/blob/master/DEVLOG.m
 
 - Version Control: Git
 
-📅 Roadmap / To-Do (If I were to continue the project)
+## 📅 Roadmap / To-Do (If I were to continue the project)
+
 [ ] Implement multi-language support for the Biography section.
 
 [ ] UI/UX polish (improving the Card design).
