@@ -15,7 +15,7 @@ My DevCard is a simple functional Android application that introduces my profile
 
 ## MY Learning Journey
 
-If you want to see my devlog, here it is 👉 (/DEVLOG.md)
+If you want to see my devlog, here it is 👉 (DEVLOG.md)
 
 🛠 Tech Stack
 - Language: Kotlin
